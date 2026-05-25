@@ -1,0 +1,10 @@
+{
+  "name": "boxento.com",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev public --port 4173",
+    "deploy": "wrangler pages deploy public --project-name boxento-com --branch main"
+  }
+}
