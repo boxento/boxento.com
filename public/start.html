@@ -3,105 +3,120 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Boxento Start</title>
+    <title>Boxento Start — An open-source start page that's yours</title>
     <meta
       name="description"
-      content="Boxento Start is a customizable start page and personal dashboard for the links, widgets, and context you use every day."
+      content="Boxento Start brings back the customizable start page: an open-source, self-hostable dashboard of widgets you arrange and own. Try it at boxento.app."
     />
     <link rel="canonical" href="https://boxento.com/start" />
-    <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/site.css?v=6" />
   </head>
   <body>
     <header class="nav">
-      <a class="brand" href="/">
-        <span class="brand-mark">B</span>
-        <span>Boxento</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="/start" aria-current="page">Start</a>
-        <a href="/mailbox">Mailbox</a>
-      </nav>
+      <div class="wrap nav-inner">
+        <a class="brand" href="/">
+          <span>Boxento</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/start" aria-current="page">Start</a>
+          <a href="/mailbox">Mailbox</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
+    <main class="wrap">
       <section class="hero">
-        <div class="hero-media" aria-hidden="true">
-          <img src="/assets/start-hero.png" alt="" />
-        </div>
-        <div class="hero-content">
-          <div class="hero-copy">
-            <p class="eyebrow">Live at boxento.app</p>
-            <h1>Boxento Start</h1>
+        <p class="eyebrow reveal reveal-1">Open source · in beta</p>
+        <h1 class="hero-title reveal reveal-2">Boxento Start.</h1>
+
+        <div class="hero-grid">
+          <div class="hero-lead reveal reveal-3">
             <p class="lede">
-              A personal start page for the links, widgets, notes, feeds, and
-              home context you want close without opening five different tabs.
+              Big tech walked away from the customizable start page. Boxento
+              Start brings it back — and hands it to you. Turn your new tab into
+              a command center of widgets you arrange, extend, and own. Hosted,
+              or self-host the whole thing.
             </p>
             <div class="actions">
               <a class="button button-primary" href="https://boxento.app">Open Boxento Start</a>
-              <a class="button button-secondary" href="/">Back to Boxento</a>
+              <a class="button button-secondary" href="https://github.com/sushaantu/boxento">View source</a>
             </div>
-            <div class="meta-row">
-              <span>Widgets</span>
-              <span>Local-first defaults</span>
-              <span>Optional account sync</span>
-            </div>
+            <p class="hero-note">Beta — solid at the core, with a few rough edges.</p>
           </div>
+
+          <dl class="meta reveal reveal-3">
+            <div class="meta-row"><dt>Status</dt><dd>Beta</dd></div>
+            <div class="meta-row"><dt>License</dt><dd>Open source</dd></div>
+            <div class="meta-row"><dt>Data</dt><dd>Local-first</dd></div>
+            <div class="meta-row"><dt>Sync</dt><dd>Optional account</dd></div>
+            <div class="meta-row"><dt>Hosting</dt><dd>Self-hostable</dd></div>
+          </dl>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-inner">
-          <p class="section-kicker">Start page</p>
-          <h2>Your first screen should know what matters.</h2>
-          <div class="feature-grid">
-            <div class="feature">
-              <strong>Widget workspace</strong>
-              <p>Arrange weather, notes, feeds, clocks, services, and custom links.</p>
-            </div>
-            <div class="feature">
-              <strong>Fast personal context</strong>
-              <p>Keep routine information in one place instead of scattered tabs.</p>
-            </div>
-            <div class="feature">
-              <strong>Portable setup</strong>
-              <p>Use it locally, sign in for sync, or self-host the dashboard.</p>
-            </div>
-          </div>
+      <section class="section split">
+        <div class="split-label">
+          <p class="kicker">The idea</p>
+          <h2>Big tech gave up on start pages. Boxento didn't.</h2>
+          <p>The customizable home of the early web — My Yahoo, iGoogle — done right and put back in your hands.</p>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="section-inner">
-          <article class="product-band">
-            <div>
-              <p class="section-kicker">Current product</p>
-              <h3>Already live.</h3>
-              <p>
-                Boxento Start remains its own product at boxento.app. This page
-                is the public product page on boxento.com.
-              </p>
-              <div class="actions">
-                <a class="button button-primary" href="https://boxento.app">Open app</a>
-                <a class="button button-light" href="https://github.com/sushaantu/boxento">
-                  Source repo
-                </a>
+        <div class="split-body">
+          <div class="list">
+            <div class="list-item">
+              <span class="list-num">01</span>
+              <div>
+                <strong>A workspace of widgets</strong>
+                <p>Links, notes, weather, clocks, feeds, and more — arranged exactly how you think, on your first screen.</p>
               </div>
             </div>
-            <a class="product-media" href="https://boxento.app" aria-label="Open Boxento Start">
-              <img src="/assets/start-hero.png" alt="Boxento Start dashboard screenshot." />
-            </a>
-          </article>
+            <div class="list-item">
+              <span class="list-num">02</span>
+              <div>
+                <strong>Build your own</strong>
+                <p>Widgets are open source. Tweak the ones you like, or write new ones — an LLM can help you ship one in an afternoon.</p>
+              </div>
+            </div>
+            <div class="list-item">
+              <span class="list-num">03</span>
+              <div>
+                <strong>Yours to keep</strong>
+                <p>Use the hosted app or self-host it entirely. Either way, your data stays on systems you control.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="cta-band">
+          <div>
+            <p class="kicker">Try it</p>
+            <h2 class="cta-title">Take back your new tab.</h2>
+          </div>
+          <div class="actions">
+            <a class="button button-primary" href="https://boxento.app">Open the app</a>
+            <a class="button button-secondary" href="https://github.com/sushaantu/boxento">Source on GitHub</a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <span>Boxento Start</span>
-      <nav aria-label="Footer">
-        <a href="/">Boxento</a>
-        <a href="/mailbox">Mailbox</a>
-        <a href="https://boxento.app">boxento.app</a>
-      </nav>
+    <footer class="footer wrap">
+      <div class="footer-inner">
+        <a class="brand" href="/">
+          <span>Boxento Start</span>
+        </a>
+        <nav aria-label="Footer">
+          <a href="/">Boxento</a>
+          <a href="/mailbox">Mailbox</a>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>

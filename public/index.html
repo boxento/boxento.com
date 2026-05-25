@@ -3,119 +3,142 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Boxento</title>
+    <title>Boxento — Personal software that stays yours</title>
     <meta
       name="description"
-      content="Boxento is a family of personal productivity tools, including Boxento Start and Boxento Mailbox."
+      content="Boxento is local-first personal software that runs on your machine, not someone else's cloud: Boxento Start, an open-source start page, and Boxento Mailbox, a local-first desktop inbox."
     />
     <link rel="canonical" href="https://boxento.com/" />
-    <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/site.css?v=6" />
   </head>
   <body>
     <header class="nav">
-      <a class="brand" href="/" aria-current="page">
-        <span class="brand-mark">B</span>
-        <span>Boxento</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="/start">Start</a>
-        <a href="/mailbox">Mailbox</a>
-      </nav>
+      <div class="wrap nav-inner">
+        <a class="brand" href="/" aria-current="page">
+          <span>Boxento</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/start">Start</a>
+          <a href="/mailbox">Mailbox</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
+    <main class="wrap">
       <section class="hero">
-        <div class="hero-media" aria-hidden="true">
-          <img src="/assets/start-hero.png" alt="" />
-        </div>
-        <div class="hero-content">
-          <div class="hero-copy">
-            <p class="eyebrow">Personal software by Boxento</p>
-            <h1>Boxento</h1>
+        <p class="eyebrow reveal reveal-1">Local-first personal software</p>
+        <h1 class="hero-title reveal reveal-2">Software that stays yours.</h1>
+
+        <div class="hero-grid">
+          <div class="hero-lead reveal reveal-3">
             <p class="lede">
-              A small set of private, useful tools for the way you actually work:
-              a personal start page and a desktop mailbox with local AI.
+              Two tools that run on your machine, not someone else's cloud — a
+              start page you shape into your own, and a desktop inbox that keeps
+              your mail and its AI local. By default, your data stays with you.
             </p>
             <div class="actions">
-              <a class="button button-primary" href="/mailbox">Download Mailbox</a>
-              <a class="button button-secondary" href="/start">Explore Start</a>
+              <a class="button button-primary" href="https://boxento.app">Open Start</a>
+              <a class="button button-primary" href="/mailbox">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download Mailbox
+              </a>
+            </div>
+            <p class="hero-note">Start is open source and in beta · Mailbox is in Mac alpha.</p>
+          </div>
+
+          <nav class="index reveal reveal-3" aria-label="Products">
+            <a class="index-item" href="/start">
+              <span class="index-num">01</span>
+              <span class="index-name">Boxento Start</span>
+              <span class="index-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <p class="index-desc">An open-source start page you fill with widgets and shape into your own. Hosted or self-hosted.</p>
+            </a>
+            <a class="index-item" href="/mailbox">
+              <span class="index-num">02</span>
+              <span class="index-name">Boxento Mailbox</span>
+              <span class="index-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <p class="index-desc">A local-first desktop inbox for Gmail. Your mail, and the AI, stay on your Mac.</p>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div class="split-label">
+          <p class="kicker">What ties them together</p>
+          <h2>Your machine. Your data. Your rules.</h2>
+          <p>
+            Big tech abandoned the personal start page. SaaS wants your inbox on
+            its servers. Boxento takes the other side.
+          </p>
+        </div>
+        <div class="split-body">
+          <div class="list">
+            <div class="list-item">
+              <span class="list-num">01</span>
+              <div>
+                <strong>Local-first</strong>
+                <p>Your data lives on your machine. Boxento connects to your services directly — it never sits in the middle.</p>
+              </div>
+            </div>
+            <div class="list-item">
+              <span class="list-num">02</span>
+              <div>
+                <strong>Shaped by you</strong>
+                <p>Arrange it, resize it, fill it with what matters. The software bends to you, not the other way around.</p>
+              </div>
+            </div>
+            <div class="list-item">
+              <span class="list-num">03</span>
+              <div>
+                <strong>Open, no lock-in</strong>
+                <p>Open source and self-hostable where it counts. Take your data and walk away whenever you like.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-inner">
-          <p class="section-kicker">Products</p>
-          <h2>Two tools, one philosophy: keep the workspace personal.</h2>
-
-          <article class="product-band">
-            <div>
-              <h3>Boxento Start</h3>
-              <p>
-                A customizable command center for links, widgets, notes, feeds,
-                clocks, weather, home status, and the small pieces of context you
-                want on your first screen.
-              </p>
-              <div class="actions">
-                <a class="button button-primary" href="/start">View Start</a>
-                <a class="button button-light" href="https://boxento.app">Open app</a>
-              </div>
-            </div>
-            <a class="product-media" href="/start" aria-label="View Boxento Start">
-              <img src="/assets/start-hero.png" alt="Boxento Start dashboard screenshot." />
-            </a>
-          </article>
-
-          <article class="product-band">
-            <div>
-              <h3>Boxento Mailbox</h3>
-              <p>
-                A Mac desktop mailbox for Gmail with signed alpha releases,
-                local AI actions, and a private model runtime bundled into the app.
-              </p>
-              <div class="actions">
-                <a class="button button-primary" href="/mailbox">Download Mac alpha</a>
-                <a
-                  class="button button-light"
-                  href="https://github.com/boxento/mailbox-releases/releases/tag/v0.1.1-alpha.2"
-                  >Release notes</a
-                >
-              </div>
-            </div>
-            <a class="product-media" href="/mailbox" aria-label="View Boxento Mailbox">
-              <img src="/assets/mailbox-hero.png" alt="Boxento Mailbox desktop app screenshot." />
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section download-panel">
-        <div class="section-inner">
+      <section class="section" style="padding-top: 0">
+        <div class="cta-band">
           <div>
-            <p class="section-kicker">Latest alpha</p>
-            <h2>Mailbox for Mac is ready to test.</h2>
-            <p>
-              Download the signed Apple Silicon build. It can check for future
-              alpha updates on launch, without auto-downloading them.
-            </p>
+            <p class="kicker">Get started</p>
+            <h2 class="cta-title">Take your software back.</h2>
           </div>
-          <a
-            class="button button-light"
-            href="https://github.com/boxento/mailbox-releases/releases/download/v0.1.1-alpha.2/Mailbox-0.1.1-alpha.2-mac-arm64.dmg"
-            >Download DMG</a
-          >
+          <div class="actions">
+            <a class="button button-primary" href="https://boxento.app">Open Start</a>
+            <a
+              class="button button-primary"
+              href="/mailbox/download"
+              >Download Mailbox</a
+            >
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <span>Boxento</span>
-      <nav aria-label="Footer">
-        <a href="/start">Start</a>
-        <a href="/mailbox">Mailbox</a>
-        <a href="https://boxento.app">boxento.app</a>
-      </nav>
+    <footer class="footer wrap">
+      <div class="footer-inner">
+        <a class="brand" href="/">
+          <span>Boxento</span>
+        </a>
+        <nav aria-label="Footer">
+          <a href="/start">Start</a>
+          <a href="/mailbox">Mailbox</a>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>
