@@ -29,12 +29,35 @@ export async function getLatestMailboxAlpha() {
     throw new Error('No Mailbox alpha release found.');
   }
 
-  const dmg = (release.assets || []).find((asset) => /^Mailbox-.+-mac-arm64\.dmg$/.test(asset.name || ''));
-  if (!dmg?.browser_download_url) {
-    throw new Error(`No Apple Silicon DMG asset found for ${release.tag_name}.`);
+  const assets = release.assets || [];
+  const macDmg = assets.find((asset) => /^Mailbox-.+-mac-arm64\.dmg$/.test(asset.name || ''));
+  const windowsInstaller = assets.find((asset) => /^Mailbox-.+-win-x64\.exe$/.test(asset.name || ''));
+
+  if (!macDmg?.browser_download_url && !windowsInstaller?.browser_download_url) {
+    throw new Error(`No Mailbox desktop download asset found for ${release.tag_name}.`);
   }
 
-  return { release, dmg };
+  return { release, macDmg, windowsInstaller };
+}
+
+export function getMailboxDownloadAsset({ macDmg, windowsInstaller }, request) {
+  const url = new URL(request.url);
+  const requestedPlatform = `${url.searchParams.get('platform') || url.searchParams.get('os') || ''}`.toLowerCase();
+  const userAgent = request.headers.get('User-Agent') || '';
+  const wantsWindows = /^(win|windows|win32|win64)$/i.test(requestedPlatform)
+    || (!requestedPlatform && /\bWindows\b/i.test(userAgent));
+
+  if (wantsWindows) {
+    if (!windowsInstaller?.browser_download_url) {
+      throw new Error('No Windows installer found for the latest Mailbox alpha release.');
+    }
+    return windowsInstaller;
+  }
+
+  if (!macDmg?.browser_download_url) {
+    throw new Error('No Apple Silicon DMG found for the latest Mailbox alpha release.');
+  }
+  return macDmg;
 }
 
 export function redirectTo(url) {

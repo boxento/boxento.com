@@ -6,7 +6,7 @@ Static marketing site for Boxento, intended for Cloudflare Pages.
 
 - `/` - main Boxento website
 - `/start` - product page for Boxento Start, linking to `boxento.app`
-- `/mailbox` - product page for Boxento Mailbox with the Mac alpha download
+- `/mailbox` - product page for Boxento Mailbox with Mac and Windows alpha downloads
 
 ## Local preview
 

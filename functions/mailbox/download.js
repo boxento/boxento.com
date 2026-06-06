@@ -1,9 +1,10 @@
-import { getLatestMailboxAlpha, redirectTo } from './_latest.js';
+import { getLatestMailboxAlpha, getMailboxDownloadAsset, redirectTo } from './_latest.js';
 
-export async function onRequest() {
+export async function onRequest({ request }) {
   try {
-    const { dmg } = await getLatestMailboxAlpha();
-    return redirectTo(dmg.browser_download_url);
+    const latest = await getLatestMailboxAlpha();
+    const asset = getMailboxDownloadAsset(latest, request);
+    return redirectTo(asset.browser_download_url);
   } catch (error) {
     return new Response(error.message || 'Unable to find the latest Mailbox alpha download.', {
       status: 502,

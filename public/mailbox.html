@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Boxento Mailbox — A local-first inbox for Mac</title>
+    <title>Boxento Mailbox — A local-first inbox for Mac and Windows</title>
     <meta
       name="description"
-      content="Boxento Mailbox is a local-first desktop inbox for Gmail. Your mail is cached on your Mac and its AI runs on-device — cloud AI is opt-in only. Download the Mac alpha."
+      content="Boxento Mailbox is a local-first desktop inbox for Gmail. Your mail is cached on your computer and its AI runs on-device — cloud AI is opt-in only. Download the Mac or Windows alpha."
     />
     <link rel="canonical" href="https://boxento.com/mailbox" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/site.css?v=6" />
+    <link rel="stylesheet" href="/assets/site.css?v=8" />
   </head>
   <body>
     <header class="nav">
@@ -32,21 +32,21 @@
 
     <main class="wrap">
       <section class="hero">
-        <p class="eyebrow reveal reveal-1">Mac alpha</p>
+        <p class="eyebrow reveal reveal-1">Mac and Windows alpha</p>
         <h1 class="hero-title reveal reveal-2">Boxento Mailbox.</h1>
 
         <div class="hero-grid">
           <div class="hero-lead reveal reveal-3">
             <p class="lede">
               A private inbox that doesn't get copied into someone else's cloud.
-              Mailbox talks straight to Gmail from your Mac, caches your mail in
-              a local database, and runs its AI on-device. Cloud AI stays off
-              until you turn it on.
+              Mailbox talks straight to Gmail from your computer, caches your
+              mail in a local database, and runs its AI on-device. Cloud AI
+              stays off until you turn it on.
             </p>
             <div class="actions">
               <a
                 class="button button-primary"
-                href="/mailbox/download"
+                href="/mailbox/download?platform=mac"
               >
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -55,19 +55,23 @@
               </a>
               <a
                 class="button button-secondary"
-                href="/mailbox/release"
-                >Release notes</a
+                href="/mailbox/download?platform=windows"
               >
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download for Windows
+              </a>
             </div>
             <p class="hero-note">Early alpha — Gmail today, more providers on the way.</p>
           </div>
 
           <dl class="meta reveal reveal-3">
-            <div class="meta-row"><dt>Platform</dt><dd>Apple Silicon</dd></div>
-            <div class="meta-row"><dt>Format</dt><dd>DMG installer</dd></div>
+            <div class="meta-row"><dt>Platforms</dt><dd>macOS Apple Silicon · Windows x64</dd></div>
+            <div class="meta-row"><dt>Formats</dt><dd>DMG · EXE installer</dd></div>
             <div class="meta-row"><dt>Storage</dt><dd>On-device cache</dd></div>
             <div class="meta-row"><dt>AI</dt><dd>Local by default</dd></div>
-            <div class="meta-row"><dt>Signing</dt><dd>Developer ID, notarized</dd></div>
+            <div class="meta-row"><dt>Signing</dt><dd>macOS Developer ID, notarized</dd></div>
           </dl>
         </div>
       </section>
@@ -76,7 +80,7 @@
         <div class="split-label">
           <p class="kicker">Why it's different</p>
           <h2>Your inbox shouldn't live in another company's cloud.</h2>
-          <p>Most "AI email" apps pull your mail onto their servers to do it. Mailbox keeps the mail, and the model, on your Mac.</p>
+          <p>Most "AI email" apps pull your mail onto their servers to do it. Mailbox keeps the mail, and the model, on your computer.</p>
         </div>
         <div class="split-body">
           <div class="list">
@@ -84,7 +88,7 @@
               <span class="list-num">01</span>
               <div>
                 <strong>Stays on your machine</strong>
-                <p>Mail, settings, OAuth tokens, and cache live in a local database on your Mac. Nothing routes through our servers.</p>
+                <p>Mail, settings, OAuth tokens, and cache live in a local database on your computer. Nothing routes through our servers.</p>
               </div>
             </div>
             <div class="list-item">
@@ -97,8 +101,8 @@
             <div class="list-item">
               <span class="list-num">03</span>
               <div>
-                <strong>Signed and direct</strong>
-                <p>Developer ID signed and notarized, connecting straight to Gmail. IMAP, Proton, and Microsoft are on the roadmap.</p>
+                <strong>Direct desktop installers</strong>
+                <p>macOS is Developer ID signed and notarized; Windows is a direct alpha installer. Both connect straight to Gmail.</p>
               </div>
             </div>
           </div>
@@ -109,18 +113,18 @@
         <div class="cta-band">
           <div>
             <p class="kicker">Download</p>
-            <h2 class="cta-title">Install the signed Mac alpha.</h2>
+            <h2 class="cta-title">Install the desktop alpha.</h2>
           </div>
           <div class="actions">
             <a
               class="button button-primary"
-              href="/mailbox/download"
-              >Download DMG</a
+              href="/mailbox/download?platform=mac"
+              >Download for Mac</a
             >
             <a
               class="button button-secondary"
-              href="/mailbox/release"
-              >Release page</a
+              href="/mailbox/download?platform=windows"
+              >Download for Windows</a
             >
           </div>
         </div>
